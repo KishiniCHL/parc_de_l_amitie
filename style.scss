@@ -1,3 +1,5 @@
+@use "mixins";
+
 html{
     font-size: 62.5%;
 }
@@ -11,6 +13,11 @@ html{
 section{
     height: 100vh;
 
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -69,18 +76,26 @@ section{
     }
 
     .arrow_down {
-        width: 0; 
-        height: 0; 
-        border-left: 2rem solid transparent;
-        border-right: 2rem solid transparent;
-        border-top: 2rem solid #EFD7D7;
+        @include mixins.arrow(down_direction);
+
     }
 
     .arrow_up{
-        width: 0; 
-        height: 0;
-        border-left: 2rem solid transparent;
-        border-right: 2rem solid transparent;
-        border-bottom: 2rem solid #EFD7D7;
+        @include mixins.arrow(up_direction);
+        
     }
+}
+
+
+#first_content{
+    @include mixins.background('img/parc-amitie-jardin-japonais-rueil-malmaison-balade-autour-paris-10.jpg')
+    
+}
+
+#second_content{
+    @include mixins.background('img/Passerelle_parc_de_lamitié.jpg')
+}
+
+#third_content{
+    @include mixins.background('img/10292977.jpg')
 }

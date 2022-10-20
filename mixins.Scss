@@ -1,0 +1,30 @@
+@mixin background($img){
+    
+    background-image: url($img);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@mixin arrow($direction){
+
+    @if($direction == up_direction){
+
+    
+    width: 0; 
+    height: 0;
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid transparent;
+    border-bottom: 2rem solid #EFD7D7;
+    }
+
+    @if ($direction == down_direction) {
+        width: 0; 
+        height: 0;
+        border-left: 2rem solid transparent;
+        border-right: 2rem solid transparent;
+        border-top: 2rem solid #EFD7D7;
+    }
+}
+
+
