@@ -17,7 +17,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #000000;
+  background-color: #A82D3C;
   padding: 10px;
   text-align: center;
   width: 13.2rem;
@@ -37,16 +37,19 @@ section {
   background-color: #EFD7D7;
   border-radius: 50%;
   display: inline-block;
+  margin-top: 1.1rem;
 }
 #navbar .arrow_top {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  margin-top: 4rem;
 }
 #navbar .arrow_bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 4rem;
 }
 #navbar .arrow {
   width: 0.7rem;
@@ -57,19 +60,18 @@ section {
   vertical-align: middle;
 }
 #navbar .arrow_down {
-  display: flex;
   width: 0;
   height: 0;
   border-left: 2rem solid transparent;
   border-right: 2rem solid transparent;
-  border-top: 2rem solid #f00;
+  border-top: 2rem solid #EFD7D7;
 }
 #navbar .arrow_up {
   width: 0;
   height: 0;
   border-left: 2rem solid transparent;
   border-right: 2rem solid transparent;
-  border-bottom: 2rem solid #f00;
+  border-bottom: 2rem solid #EFD7D7;
 }
 
 /*# sourceMappingURL=style.css.map */
