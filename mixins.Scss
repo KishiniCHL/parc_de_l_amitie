@@ -63,3 +63,9 @@
     grid-row-start: $row_start;
     grid-row-end:$row_end;
 }
+
+@mixin bulle {
+    background-color: #D9D9D9;
+    opacity: 70%;
+    border-radius: 0.4rem;
+}
