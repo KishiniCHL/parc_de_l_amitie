@@ -56,3 +56,9 @@
         justify-content: $justify_content;
     } 
 }
+
+@mixin grid($column_start, $column_end, $row_start, $row_end){
+    grid-column: $column_start/$column_end;
+    grid-row: $row_start/$row_end;
+
+}
