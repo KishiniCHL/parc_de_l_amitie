@@ -7,15 +7,12 @@ let second_section = document.getElementById("second_content")
 let third_section = document.getElementById("third_content")
 let fourth_section = document.getElementById("gallery")
 
-let section = document.getElementsByClassName("content")[0]
-
 function scroll_function(){
     if (window.scrollY == 0 ){
         arrow_top.style.visibility = "hidden";
     }  
     else{
         arrow_top.style.visibility = "";
-
     } 
 
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -27,7 +24,6 @@ function scroll_function(){
 }
 
 function hide_nav(){
-    
     if(((window.innerHeight + window.scrollY) >= document.body.offsetHeight) && document.body.clientWidth <= 1024){
         navbar.style.visibility = "hidden";
         up_button.style.visibility = "visible";
@@ -50,12 +46,6 @@ window.onresize = function () {
     scroll_function()
 }
 
-const array = ['first_section','second_section', 'third_section', 'fourth_section' ]
-
-array.forEach((zone) => {
-    
-});
-
 var rootElement = document.documentElement
 
 function go_top() {
@@ -68,6 +58,8 @@ function go_top() {
 up_button.addEventListener("click", go_top)
 
 
+//position des sections///
+
 const position = document.querySelector('section')
 const getOffset = (el) => {
 const rect = el.getBoundingClientRect();
@@ -76,4 +68,23 @@ return {
     top: rect.top + window.scrollY
 };
 }
-console.log(getOffset(section));
+console.log(getOffset(first_section));
+console.log(getOffset(second_section));
+console.log(getOffset(third_section));
+console.log(getOffset(fourth_section));
+
+
+//scrollto///
+
+let arrow_scroll_bot = document.getElementsByClassName("scroll_down_nav")[0]
+
+
+function top_scroll(){
+    if (arrow_scroll_bot == true && left == 0 && top == 0 ){
+        window.scrollTo(0,729.6000366210938)
+    }
+    else{
+
+    }
+};
+arrow_scroll_bot.addEventListener("click",top_scroll);
