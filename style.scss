@@ -15,7 +15,6 @@ $box_shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 html{
-    
     font-size: 62.5%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -43,7 +42,6 @@ p{
 section{
     height: 100vh;
     scroll-snap-align: start;
-
 }
 
 header{
@@ -75,7 +73,6 @@ header{
         @include mixins.breakpoint(1024px){
             @include mixins.flex(row, center,space-between);
             padding: 0rem;
-
         };
     }
     .dot{
@@ -86,15 +83,16 @@ header{
         display: inline-block;
         margin-top: 1.1rem;
         box-shadow: $box_shadow;
+        cursor: pointer;
         @include mixins.breakpoint(1024px){
             margin: 0.6rem;
         };
+    }
+    .dot:hover{
+        background-color: rgb(226, 134, 42);
+        transition: 0.5s ;
+    }
 
-    }
-    & active{
-        @extend .dot;
-        background-color: rgb(15, 179, 0);
-    }
 
     .arrow_top{
         @include mixins.flex(column-reverse, center);
@@ -104,17 +102,19 @@ header{
         @include mixins.flex(column, center);
         margin-bottom: 4rem;
     }
+    
     .arrow{
         width: 0.7rem;
         height: 6.5rem;
         background-color: $light_color;
-        content: "";
         display: inline-block;
         vertical-align: middle;
         box-shadow: $box_shadow;
+        cursor: pointer;
     }
     .arrow_down {
         @include mixins.arrow(down_direction);
+        cursor: pointer;
         @include mixins.breakpoint(1024px){
             padding-top: 2rem;
             transform: rotate(-90deg);
@@ -124,8 +124,11 @@ header{
             border-top: 1rem solid #EFD7D7;
         }
     }
+
+    
     .arrow_up{
         @include mixins.arrow(up_direction);
+        cursor: pointer;
         @include mixins.breakpoint(1024px){
             padding-bottom: 4rem;
             border-left: 1rem solid transparent;
@@ -154,7 +157,6 @@ header{
         }
         
         #underline_title{
-
             border-top: 0.4rem solid #C5C5C5;
             opacity: 78%;
             background-color: $main_color;
@@ -223,7 +225,6 @@ header{
         height:46.7rem;
         width: 46.7rem;
         padding: 8.4rem 4.2rem 8.4rem 4.2rem;
-    
         @include mixins.breakpoint(1024px){
             @include mixins.flex(column, null, null);
             margin: 0 0 0 0;
@@ -231,7 +232,6 @@ header{
             width: auto;
             @include mixins.bulle(100%);
             background-color: rgb(240, 240, 240);
-
         };
 
     #vertical_line{
@@ -246,7 +246,6 @@ header{
 //deuxieme section//
 
 #second_content{
-    
     @include mixins.background('img/Passerelle_parc_de_lamitié.jpg');
     @include mixins.flex(null,flex-end,null);
     @include mixins.breakpoint(1024px){
@@ -269,7 +268,6 @@ header{
         height: 46.5rem;
         width: 81.5rem;
         padding: 12.7rem 6.3rem 12.7rem 6.3rem ;
-
         @include mixins.breakpoint(1024px){
             @include mixins.flex(column, null, null);
             margin: 0;
@@ -321,16 +319,14 @@ header{
         width: 45rem;
         margin: 0 0 6.8rem 9.8rem;
         padding:6.5rem 4.7rem 6.5rem 4.7rem;
-    
         @include mixins.breakpoint(1024px){
-        @include mixins.flex(column, null, null);
-
-        margin: 0;
-        height:37.4rem;
-        width: auto;
-        @include mixins.bulle(100%);
-        background-color: rgb(240, 240, 240);
-        padding-top:10rem;
+            @include mixins.flex(column, null, null);
+            margin: 0;
+            height:37.4rem;
+            width: auto;
+            @include mixins.bulle(100%);
+            background-color: rgb(240, 240, 240);
+            padding-top:10rem;
         }
 };
 
@@ -372,7 +368,7 @@ header{
         border-bottom-right-radius: 5rem;
         @include mixins.breakpoint(1024px){
             border-top-left-radius:0;
-        border-bottom-right-radius: 0;
+            border-bottom-right-radius: 0;
         }
     }
     .gallery_item-1 {
@@ -428,8 +424,6 @@ header{
             border-left: 1.2rem solid transparent;
             border-right: 1.2rem solid transparent;
             border-bottom: 1.2rem solid #ffffff;
-        }
-        @include mixins.breakpoint(1024px){
         }
     }
 
