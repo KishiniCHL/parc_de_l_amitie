@@ -8,6 +8,7 @@
 }
 
 
+
 //arrow//
 
 @mixin arrow($direction){
@@ -64,8 +65,21 @@
     grid-row-end:$row_end;
 }
 
-@mixin bulle {
+@mixin bulle($opacity : 70%) {
     background-color: #D9D9D9;
-    opacity: 70%;
+    opacity: $opacity;
+    @if $opacity != 70% {
+        opacity: $opacity;
+    }
     border-radius: 0.4rem;
+}   
+
+
+@mixin vertical_line_text(){
+    width: 11.1rem;
+    border-top: 0.4rem solid #C5C5C5;
+    opacity: 78%;
+    background-color:#A82D3C;
+    border-top: 0.4rem solid #A82D3C;
+    margin-top: 1.8rem
 }
